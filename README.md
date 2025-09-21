@@ -1,16 +1,30 @@
-# Web Kundli - Unveil the Secrets of the Website!
+# Web Matrix UI - Unveil the Secrets of the Website!
 
 ### Unveil the Secrets of Your Website: Secure, Analyze, Optimize.
-- Web Kundli is a comprehensive tool designed to uncover details about a website.
-- The main idea is straightforward: provide URL to the tool, and it will collect, organize, and display a wide range of open data for you to explore.
-- This data helps identify potential vulnerabilities in the website and help optimizing its configurations. Further fine-tuning reduces the website’s potential risks.
+- Web Matrix UI is a comprehensive tool and web application designed to uncover details about a website and provide users with a secure login experience.
+
+- Users can now sign up and create accounts to access the platform.
+
+- The web interface supports Dark & Light mode reports, offering a modern and user-friendly dashboard.
+
+- The main idea is straightforward: provide a URL to the tool, and it will collect, organize, and display a wide range of open data for exploration.
+
+- This data helps identify potential vulnerabilities in the website and optimize configurations. Further fine-tuning reduces the website’s potential risks.
 
 ## Features
-- This Tool is developed in **Python programming**.
-- Developed using **asynchronous programming**, allowing modules to run in parallel and achieve faster results.
-- The **NMAP scan feature** is also available. Reports can be generated with or without the NMAP scan.
-- Based on the output of each module, it calculates the percentage for that module and then calculate the overall performance across all modules. This data is used to **display Website Health**.
-- At present, the HTML report dashboard **supports 30 modules**. More features will be added soon! 
+- Developed in **Python programming**.
+
+- Built with **asynchronous programming**, allowing modules to run in parallel for faster results.
+
+- Includes an **NMAP scan feature** — reports can be generated with or without the NMAP scan.
+
+- Based on the output of each module, it calculates a percentage score for each module and an overall performance score. This is used to **display Website Health**.
+
+- Now available as a **web application with authentication** (sign up & login).
+
+- Supports **Dark & Light mode reports** for better accessibility and user experience.
+
+- Currently, the HTML report **dashboard supports 30 modules**, with more features coming soon!
   
   `1. SSL certificates`
   `2. DNS Records`
@@ -44,7 +58,7 @@
   `30. Nmap_Scan Version Result`      
 
 ## Installation
-To install and run the Web Kundli Tool, follow these steps:
+To install and run the Web Matrix UI tool, follow these steps:
 
 Install the required Python libraries:
 1. `pip install python-whois`
@@ -61,21 +75,27 @@ Install the required Python libraries:
 12. `pip install pyfiglet`
 13. `pip install pyOpenSSL`
 14. `pip install python3-nmap - Ensure that the nmap software is installed on your machine.`
+15. `pip install Flask`
+16. `pip install Flask-SQLAlchemy`
+17. `pip install Flask-WTF`
+18. `pip install Flask-Login`
+19. `pip install Flask-Security-Too`
 
 ## Usage
 
-### The tool is a command-line utility compatible with Windows and Linux OS.
+### Web Application
 
-Execute the tool using the following commands:
+  - **Execute the tool using the following commands:**
+    ```bash
+    python app.py -s google.com -m 0
+    ```
 
-- **Without Nmap**:
-    ```bash
-    python main.py -s https://google.com
-    ```
-- **With Nmap**:
-    ```bash
-    python main.py -sn https://google.com
-    ```
+  -  **Start the web application server.**
+
+  -  **Users can sign up and log in to access the dashboard.**
+
+  -  **Reports can be viewed in Dark or Light mode.**
+
 
 ## Files
 
@@ -92,11 +112,11 @@ HTML report files are located under the `./output` directory:
   
 ![Screenshot from 2024-10-06 19-34-52](https://github.com/user-attachments/assets/70f37846-0d32-4121-b103-480caa739c4c)
 
-- **Output HTML Report Screenshot:**
+- **HTML Summary Report Screenshot:**
   
 ![Screenshot from 2024-10-06 19-35-29](https://github.com/user-attachments/assets/e5ec573c-5b37-48d0-bd33-e6c2729f1d68)
 
-- **Report with NMAP Result**
+- **HTML Analysis Report Screenshot**
 
 ![NMAP](https://github.com/user-attachments/assets/79341c66-50a0-40fa-959d-52f74c29fad0)
 

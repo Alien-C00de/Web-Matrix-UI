@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Welcome to Web Matrix - Unveil the Secrets of the Website!!</h1>
+    <div >
+        <h2>
+            Unveil the Secrets of Your Website: Secure, Analyze, Optimize.
+        </h2>
+        <ul style="font-size: 1.1em; line-height: 1.6; color: #555;">
+            <li>
+                <strong>Web Matrix</strong> is a comprehensive tool designed to uncover details about a website.
+            </li>
+            <li>
+                The main idea is straightforward: provide a URL to the tool, and it will collect, organize, and display a wide range of open data for you to explore.
+            </li>
+            <li>
+                This data helps identify potential vulnerabilities in the website and helps optimize its configurations. Further fine-tuning reduces the website’s potential risks.
+            </li>
+        </ul>
+    </div>
+    {% if not current_user.is_authenticated %}
+    <p>Please <a href="{{ url_for('login') }}">log in</a> or <a href="{{ url_for('signup') }}">sign up</a> to access more features.</p>
+    {% endif %}
+{% endblock %}

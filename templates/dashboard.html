@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Matrix</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .main-container {
+            max-width: 1800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .form-row label {
+            min-width: 270px;
+            font-weight: bold;
+        }
+
+        .form-row input[type="text"],
+        .form-row select {
+            flex: 1;
+            padding: 8px;
+            font-size: 1rem;
+        }
+
+        .form-container button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        iframe {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h1>Web Matrix</h1>
+
+        <!-- {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %} -->
+
+        <form method="POST" action="{{ url_for('report') }}" class="form-container">
+            <div class="form-row">
+                <label for="website_name">Website Name (e.g., example.com):</label>
+                <input type="text" id="website_name" name="website_name" value="{{ request.form.website_name or '' }}" required>
+            </div>
+
+            <div class="form-row">
+                <label for="report_mode">Report Mode:</label>
+                <select id="report_mode" name="report_mode" required>
+                    <option value=0 {% if (request.form.report_mode or 'Light') == 'Light' %}selected{% endif %}>Light</option>
+                    <option value=1 {% if (request.form.report_mode or 'Light') == 'Dark' %}selected{% endif %}>Dark</option>
+                </select>
+            </div>
+
+            <button type="submit">Generate Report</button>
+        </form>
+
+        {% if report_file_url %}
+        <hr>
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <h2 style="margin: 0;">Generated Report for: {{ submitted_website }}</h2>
+            <p style="margin: 0;">
+                <a href="{{ report_file_url }}" target="_blank">Open Report for full screen</a>
+            </p>
+        </div>
+        <div class="report-frame-container">
+            <iframe id="reportFrame" src="{{ report_file_url }}" height="600px" style="border:1px solid #ccc; width: 100%;"></iframe>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+{% endblock %}
+

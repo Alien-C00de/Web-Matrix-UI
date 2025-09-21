@@ -103,30 +103,21 @@ Install the required Python libraries:
 
 ## Report Files
 
-HTML report files are located under the `./output` directory:
+HTML report files are located under the `web_matrix/Tool/output` directory:
 
-`e.g. WebKundli_google.com_21Sep2024_12-13-55.html`
+`e.g. WebMatrix_google.com_21Sep2025_20-49-35.html`
 
 ## Image
 - **Input Screen:**
   <img width="1222" height="721" alt="Screenshot from 2025-09-21 20-49-31" src="https://github.com/user-attachments/assets/08020aef-18ab-4d6e-aded-668c3231c668" />
 
+- **HTML Summary Report Screenshot:**
 
   <img width="1802" height="996" alt="Screenshot from 2025-09-21 20-55-40" src="https://github.com/user-attachments/assets/c43c68c4-8bbb-40e2-8110-2cc80826e288" />
 
-  <img width="1830" height="1003" alt="Screenshot from 2025-09-21 20-55-58" src="https://github.com/user-attachments/assets/54b8090e-d304-4a89-a5b9-50546e95c723" />
-
-
-
-![Screenshot from 2024-10-06 19-34-52](https://github.com/user-attachments/assets/70f37846-0d32-4121-b103-480caa739c4c)
-
-- **HTML Summary Report Screenshot:**
-  
-![Screenshot from 2024-10-06 19-35-29](https://github.com/user-attachments/assets/e5ec573c-5b37-48d0-bd33-e6c2729f1d68)
-
 - **HTML Analysis Report Screenshot**
 
-![NMAP](https://github.com/user-attachments/assets/79341c66-50a0-40fa-959d-52f74c29fad0)
+  <img width="1830" height="1003" alt="Screenshot from 2025-09-21 20-55-58" src="https://github.com/user-attachments/assets/54b8090e-d304-4a89-a5b9-50546e95c723" />
 
 
 🚀 Happy Website analysis! 🚀

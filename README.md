@@ -24,7 +24,7 @@
 
 - Supports **Dark & Light mode reports** for better accessibility and user experience.
 
-- Currently, the HTML report **dashboard supports 30 modules**, with more features coming soon!
+- Currently, the HTML report **dashboard supports 36 modules**, with more features coming soon!
   
   `1. SSL certificates`
   `2. DNS Records`
@@ -55,7 +55,13 @@
   `27. Malware & Phishing Detection`
   `28. TLS Cipher Suites`  
   `29. Nmap Scan OS Detection`
-  `30. Nmap_Scan Version Result`      
+  `30. Nmap_Scan Version Result`
+  `31. NMAP HTTP Vulenrability`
+  `32. NMAP SQL Injection`
+  `33. NMAP XSS Vulnerability`
+  `34. NMAP ShellShock`  
+  `35. NMAP RCE Exploit`
+  `36. NMAP Web Server Check`       
 
 ## Installation
 To install and run the Web Matrix UI tool, follow these steps:
